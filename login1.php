@@ -1,30 +1,26 @@
 <?php
 
-include_once 'include/connect.php'; 
+	include_once 'connect.php';
+
+	$name = $_POST['name'];
+	$password = $_POST['password'];
+
+	$sql = "SELECT * FROM patient WHERE name='$name' AND password='$password';";
+	$result = $conn->query($sql);
+
+	if (!mysqli_query($conn,$sql))
+  	{
+  		echo("Error description: " . mysqli_error($conn));
+  	}elseif ($result->num_rows > 0) {
+    // output data of each row
+    	while($row = $result->fetch_assoc()) {
+        	//include 'nod.php';
+        	echo "<br>" . "District: " . $row["district"]. " - Name: " . $row["name"]. " " . $row["blood_group"]. "<br>";
+    	}
+	}else {
+    echo "0 results";
+	}
+  
+
 
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="style/login.css">
-</head>
-<body>
-<header>
-	<?php include'style/footerhead.php'; ?>
-</header>
-<main>
-	<form action="include/login1.php" method="POST" align="center">
-		<input type="text" name="name" placeholder="Name"><br>
-		<input type="password" name="password" placeholder="Password"><br>
-		<input type="submit" value="Login"><br>
-
-		<a href="sign1.php">Not still an account</a>
-	</form>
-</main>
-<footer>
-	<?php include'style/footer.php';  ?>
-</footer>
-</body>
-</html>
