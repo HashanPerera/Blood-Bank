@@ -1,0 +1,47 @@
+nav ul{
+	
+	/*background-color: #800000;*/
+	background-color: #51545f;
+}
+nav ul li{
+	overflow: hidden;
+	margin-left: 20px;
+	margin-right: 10px;
+	padding: 20px;
+	display: inline-block;
+	font-size: 20px;
+}
+
+nav ul li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+body{
+	/*background-color: #cc3300;*/
+	background-color: #ffffff;
+}
+#as{
+	text-align:center;
+	//*margin: 10px;*/
+	border-collapse: collapse;
+	margin-left: 500px;
+}
+
+.social{
+	padding: 20px;
+	margin-left: 20px;
+	/*float: right;*/
+}
+	
+.ft1{
+	text-decoration: none;
+	font-size: 15px;
+	padding: 10px;
+}
+/*.social1{
+	margin-left: 20px;
+	text-decoration: none;
+	font-size: 30px;
+	/*float: right;
+}*/

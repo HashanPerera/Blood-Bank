@@ -1,0 +1,15 @@
+#bg{
+	margin-left: 10px;
+	display: block;
+}
+
+#main{
+	text-decoration: none;
+	overflow: hidden;
+	display: block;
+}
+
+#input{
+	padding: 5px;
+	margin: 5px;
+}
